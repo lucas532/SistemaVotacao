@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xml:lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de votação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de votação para escolher um restaurante">
+    <script type="text/javascript" src="VotacaoRestaurante.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="VotacaoRestaurante.css">
+</head>
+<body>
+<h1 id="tituloTexto">Votação de Restaurante para o almoço</h1>
+<div id="divVotacao">
+    <label for="nomeFuncionario" class="LABEL">Nome do funcionário</label><br>
+    <input type="text" id="nomeFuncionario" name="nomeFuncionario" class="INPUT"><br><br>
+    <label for="nomeRestaurante" class="LABEL">Nome do restaurante</label><br>
+    <input type="text" id="nomeRestaurante" name="nomeRestaurante" class="INPUT"><br><br>
+    <div id="divBotoes">
+        <input id="btnVotar" class="BOTAO" type="button" value="Votar" onclick="votar()">
+        <input id="btnResultado" class="BOTAO" type="button" value="Ver resultado Parcial" onclick="buscarVotos()">
+    </div>
+</div>
+<strong id="textoVazio" class="HIDDEN">Nenhum restaurante votado.</strong>
+<ol id="listaResult" class="HIDDEN"></ol>
+<span id="clock"></span>
+<strong id="textoVotacao"></strong>
+</body>
+</html>

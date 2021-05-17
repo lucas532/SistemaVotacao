@@ -1,0 +1,79 @@
+html {
+    font-size: 2vw;
+}
+
+#tituloTexto {
+    pointer-events: none;
+    position: absolute;
+    top: 2%;
+    right: 15%;
+    left: 15%;
+    font-size: 1.7rem;
+    font-family: "Arial", sans-serif;
+    color: darkviolet;
+}
+
+#clock {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 1.7rem;
+    font-family: "Courier New", sans-serif;
+    pointer-events: none;
+}
+
+#divVotacao {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-family: "Tahoma", sans-serif;
+}
+
+#btnVotar {
+    position: absolute;
+    left: 0;
+}
+
+#btnResultado {
+    position: absolute;
+    right: 0;
+}
+
+#textoVazio {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    font-size: 1.4rem;
+}
+
+#textoVotacao {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    font-size: 1.4rem;
+}
+
+#listaResult {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    font-size: 1.3rem;
+}
+
+.LABEL, .INPUT {
+    font-size: 1.2rem;
+}
+
+.BOTAO {
+    font-size: 1.1rem;
+}
+
+.HIDDEN {
+    visibility: hidden;
+}
+
+.DISABLED {
+    pointer-events: none;
+    opacity: 0.4;
+    color: grey;
+}
