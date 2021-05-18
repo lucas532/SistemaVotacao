@@ -20,7 +20,7 @@ public class VotacaoTest {
 
     @BeforeAll
     static void setWebDriver() {
-        System.setProperty("webdriver.edge.driver", "C:/Users/Lucas Lopes/IdeaProjects/SistemaVotacao/src/main/resources/msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "src/main/resources/msedgedriver.exe");
     }
 
     @BeforeEach
