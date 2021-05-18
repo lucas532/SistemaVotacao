@@ -23,7 +23,7 @@ public class VotoServico {
     private PessoaServico pessoaServico;
     private RestauranteServico restauranteServico;
 
-    private Boolean estadoVotacao ; //true - aberta, false - fechada
+    private Boolean estadoVotacao; //true - aberta, false - fechada
 
     public VotoServico(VotoRepositorio votoRepositorio, PessoaServico pessoaServico, RestauranteServico restauranteServico) {
         super();
