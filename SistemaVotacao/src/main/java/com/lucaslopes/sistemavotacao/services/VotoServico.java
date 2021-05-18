@@ -23,7 +23,7 @@ public class VotoServico {
     private PessoaServico pessoaServico;
     private RestauranteServico restauranteServico;
 
-    private Boolean estadoVotacao = true; //true - aberta, false - fechada
+    private Boolean estadoVotacao ; //true - aberta, false - fechada
 
     public VotoServico(VotoRepositorio votoRepositorio, PessoaServico pessoaServico, RestauranteServico restauranteServico) {
         super();
@@ -50,9 +50,11 @@ public class VotoServico {
 
         //Encerra votação atual todos os dias às 11 horas da manhã
         LocalDateTime horarioEncerraVotaccao = LocalDateTime.of(LocalDate.now(), LocalTime.of(11, 0, 0));
-        if (horarioAtual.isBefore(horarioEncerraVotaccao)) {
+        if (horarioAtual.isBefore(horarioEncerraVotaccao) || horarioAtual.isAfter(horarioResetDados)) {
+            estadoVotacao = true;
             delayInicial = ChronoUnit.SECONDS.between(horarioAtual, horarioEncerraVotaccao);
         } else {
+            estadoVotacao = false;
             delayInicial = ChronoUnit.SECONDS.between(horarioAtual, horarioEncerraVotaccao.plusDays(1));
         }
         executor.scheduleAtFixedRate(encerrarVotacao, delayInicial, delayDiario, TimeUnit.SECONDS);
